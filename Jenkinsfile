@@ -8,11 +8,6 @@ pipeline{
             steps{
                 sh 'mvn clean package'
             }
-            post{
-                success{
-                    echo "Archiving the Artifacts"
-                    archiveArtifacts artifacts: '**/*.war'
-                }
             }
 
         }
